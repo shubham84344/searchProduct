@@ -1,0 +1,49 @@
+.App {
+  background-color: wheat;
+  height: 100vh;
+  
+  .headingTitle {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 20px;
+  }
+
+  .searchArea {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .searchInput {
+      width: 89%;
+      height: 40px;
+      font-size: 30px;
+      border-radius: 20px;
+      border: 2px solid #000;
+      padding-left: 15px;
+
+      &:focus,
+      &:hover {
+        outline: none;
+        border: 2px solid #0099ff;
+        box-shadow: 0 0 5px #0099ff44;
+      }
+    }
+
+    .SearchBtn {
+      width: 9%;
+      border-radius: 20px;
+      border: 2px solid #000;
+      font-size: 30px;
+      cursor: pointer;
+
+      &:focus,
+      &:hover {
+        outline: none;
+        border: 2px solid #0099ff;
+        box-shadow: 0 0 5px #0099ff44;
+
+      }
+    }
+  }
+}
