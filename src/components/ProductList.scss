@@ -1,50 +1,101 @@
 .ProductListScss {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .leftSide {
+    border-radius: 20px;
+    border: 2px solid black;
+    width: 14.5%;
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 0px;
-  
-    .leftSide {
-      border-radius: 20px;
-      border: 2px solid black;
-      height: 80vh;
-      width: 14.5%;
-      padding: 20px;
-  
-      @media (max-width: 900px) {
-        width: 25%;
-        height: auto;
-      }
-  
-      @media (max-width: 600px) {
-        width: 100%;
-        height: auto;
-        border-bottom: 2px solid black;
-      }
-    }
-  
-    .rightSide {
-      border-radius: 20px;
-      border: 2px solid black;
-      height: 80vh;
-      width: 84.5%;
-      padding: 20px;
-  
-      @media (max-width: 900px) {
-        width: 74%;
-        height: auto;
-      }
-  
-      @media (max-width: 600px) {
-        width: 100%;
-        height: auto;
-        border-top: 2px solid black;
-      }
-    }
-  
+    background: #fffbea;
+
+    @media (max-width: 900px) { width: 25%; }
     @media (max-width: 600px) {
-      flex-direction: column;
-      gap: 10px;
+      width: 100%;
+      margin-bottom: 10px;
     }
   }
-  
+
+  .rightSide {
+    border-radius: 20px;
+    border: 2px solid black;
+    width: 84.5%;
+    padding: 20px;
+    background: #ffffff;
+
+    @media (max-width: 900px) { width: 74%; }
+    @media (max-width: 600px) {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+    }
+
+    .productGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .productCard {
+      background: #f6f6f6;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #00000012;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s;
+      width: 290px;
+      border: 2px solid black;
+
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+
+      &:hover {
+        box-shadow: 0 4px 16px #00000022;
+      }
+
+      .productImg {
+        width: 120px;
+        height: 130px;
+        object-fit: contain;
+        margin-bottom: 8px;
+      }
+      .productTitle {
+        font-size: 1.1rem;
+        margin: 6px 0;
+        text-align: center;
+      }
+      .productCategory {
+        font-size: 0.95rem;
+        color: #3a82ee;
+        margin-bottom: 4px;
+      }
+      .productPrice {
+        font-weight: 600;
+        margin: 4px 0;
+      }
+      .productDesc {
+        font-size: 0.85rem;
+        color: #333;
+        margin-bottom: 6px;
+        height: 2.6em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .productRating {
+        font-size: 0.9rem;
+        color: #f90;
+      }
+    }
+  }
+
+  // Stack left & right on mobile
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 0;
+  }
+}

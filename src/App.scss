@@ -1,6 +1,6 @@
 .App {
   background-color: wheat;
-  min-height: 100vh;  
+  min-height: 100vh;
 
   .headingTitle {
     font-size: 30px;
@@ -20,7 +20,7 @@
     justify-content: space-between;
 
     .searchInput {
-      width: 89.5%;
+      width: 100%;
       font-size: 30px;
       border-radius: 20px;
       border: 2px solid #000;
@@ -44,44 +44,10 @@
       }
     }
 
-    .SearchBtn {
-      width: 9.5%;
-      border-radius: 20px;
-      border: 2px solid #000;
-      font-size: 30px;
-      cursor: pointer;
-
-      &:focus,
-      &:hover {
-        outline: none;
-        border: 2px solid #0099ff;
-        box-shadow: 0 0 5px #0099ff44;
-      }
-
-      @media (max-width: 600px) {
-        font-size: 22px;
-        height: 35px;
-        width: 11%;
-      }
-
-      @media (max-width: 400px) {
-        font-size: 18px;
-        height: 30px;
-        width: 15%;
-      }
-    }
-
     @media (max-width: 380px) {
       flex-direction: column;
       gap: 10px;
 
-      .searchInput {
-        width: 100%;
-      }
-
-      .SearchBtn {
-        width: 100%;
-      }
     }
   }
 }

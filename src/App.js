@@ -1,7 +1,10 @@
+import React, { useState } from 'react';
 import './App.scss';
 import ProductList from './components/ProductList';
 
 function App() {
+  const [search, setSearch] = useState('');
+
   return (
     <div className="App">
       <p className='headingTitle'>Search Product</p>
@@ -10,10 +13,11 @@ function App() {
           className='searchInput'
           type='text'
           placeholder='Search..'
+          value={search}
+          onChange={e => setSearch(e.target.value)}
         />
-        <button className='SearchBtn'>Search</button>
       </div>
-      <ProductList />
+      <ProductList search={search} />
     </div>
   );
 }
